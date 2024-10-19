@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "9d2be6c6-a85e-439c-acfc-37a983ea0a71",
+		"name": "wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User_Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nationalID\": \"0023995718\",\r\n    \"name\": \"Hossein\",\r\n    \"lastName\": \"Jafari\",\r\n    \"mobilePhoneNumber\":\"09107702222\",\r\n    \"birthDate\": \"2000-12-10\",\r\n    \"gender\": \"male\",\r\n    \"militaryServiceStatement\": false,\r\n    \"email\": \"hani.j.2000@gmail.com\",\r\n    \"username\": \"hanij\",\r\n    \"password\": \"1234SAFE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/users",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_ReadAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/users",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_ReadByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/users/1",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nationalID\": \"0023995718\",\r\n    \"name\": \"Hanie\",\r\n    \"lastName\": \"Jafari\",\r\n    \"mobilePhoneNumber\":\"09107702220\",\r\n    \"birthDate\": \"2000-12-10\",\r\n    \"gender\": \"female\",\r\n    \"militaryServiceStatement\": false,\r\n    \"email\": \"hani.j.2000@gmail.com\",\r\n    \"username\": \"hanij\",\r\n    \"password\": \"1234SAFE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/users/1",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/users/2",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account_Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":{\"id\":1},\r\n    \"accountNumber\":\"6037000000000\",\r\n    \"balance\":2463646454,\r\n    \"accountCreationDate\":\"2024-10-17\",\r\n    \"shebaNumber\":\"IR123456789123456789123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/accounts",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account_ReadAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/accounts",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account_ReadByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/accounts/1",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account_UpdateBalance",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":{\"id\":1},\r\n    \"accountNumber\":\"6037000000000\",\r\n    \"balance\": 5927292908,\r\n    \"accountCreationDate\":\"2024-10-17\",\r\n    \"shebaNumber\":\"IR123456789123456789123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/accounts/1/balance",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"1",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/accounts/2",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountStatement_Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/account-statements/1",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"account-statements",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction_Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountStatement\":{\"id\":1},\r\n    \"type\": \"WITHDRAWAL\",\r\n    \"date\": \"2024-10-18\",\r\n    \"amount\": \"2464444\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/transactions",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction_ReadByStatementID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wallet-backend.liara.run/api/transactions/account-statement/1",
+					"protocol": "https",
+					"host": [
+						"wallet-backend",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"transactions",
+						"account-statement",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
